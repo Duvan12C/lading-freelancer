@@ -1,13 +1,30 @@
 
-import { Button } from '@/components/ui/Button';
-import { FiArrowUpRight, FiChevronDown, FiMail } from 'react-icons/fi';
 import Card from '@/components/ui/Card';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useForm, ValidationError } from '@formspree/react';
+import { useEffect, useRef } from 'react';
+import { Button } from '@/components/ui/Button';
+import {
+    FiArrowUpRight,
+    FiChevronDown,
+    FiLoader,
+    FiMail,
+} from 'react-icons/fi';
+
+
 
 const Contact = () => {
 
     const [state, handleSubmit] = useForm('mvzerejk');
+
+    const formRef = useRef<HTMLFormElement>(null);
+
+    useEffect(() => {
+        if (state.succeeded) {
+            formRef.current?.reset();
+        }
+    }, [state.succeeded]);
+
     return (
         <section
             id="contacto"
@@ -119,9 +136,8 @@ const Contact = () => {
                         borderColor="borde-morado"
                         hoverBorderColor="primario"
                         rounded="xl"
-                        className="bg-superficie/40 p-6 sm:p-8"
-                    >
-                        <form onSubmit={handleSubmit} className="space-y-5">
+                        className="bg-superficie/40 p-6 sm:p-8">
+                        <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
                             <div>
                                 <label
                                     htmlFor="nombre"
@@ -299,11 +315,18 @@ const Contact = () => {
                                 type="submit"
                                 fullWidth
                                 disabled={state.submitting}
-                                icon={<FiArrowUpRight />}
+                                className={state.submitting ? 'cursor-wait' : ''}
+                                icon={
+                                    state.submitting ? (
+                                        <FiLoader className="size-5 animate-spin" />
+                                    ) : (
+                                        <FiArrowUpRight />
+                                    )
+                                }
                                 iconPosition="right"
                             >
                                 {state.submitting
-                                    ? 'Enviando...'
+                                    ? 'Enviando solicitud...'
                                     : 'Solicitar cotización'}
                             </Button>
 
