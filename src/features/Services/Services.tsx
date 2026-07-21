@@ -45,16 +45,16 @@ const Services = () => {
         <section id="servicios">
             <div
                 className="
-        mx-auto
-        flex
-        min-h-[calc(100svh-5rem)]
-        max-w-7xl
-        flex-col
-        justify-center
-        px-6
-        py-6
-        lg:px-8
-    "
+                mx-auto
+                flex
+                min-h-[calc(100svh-5rem)]
+                max-w-7xl
+                flex-col
+                justify-center
+                px-6
+                py-6
+                lg:px-8
+            "
             >
                 {/* Columna izquierda */}
                 <div className="max-w-xl">
@@ -102,21 +102,32 @@ const Services = () => {
                                 borderColor="borde-morado"
                                 hoverBorderColor="primario"
                                 rounded="lg"
-                                className="relative bg-blanco-suave p-5"
-
-                            >
+                                className="relative bg-blanco-suave p-5 sm:p-6">
                                 <Card
                                     borderColor="primario"
                                     rounded="md"
                                     width="size-14"
                                     height="size-14"
-                                    className="absolute left-6 top-6 flex items-center justify-center bg-primario text-blanco"
-                                >
-                                    {service.icon && <service.icon className="size-8" />}
+                                    className="
+                                            absolute
+                                            left-5
+                                            top-5
+                                            flex
+                                            size-12
+                                            items-center
+                                            justify-center
+                                            bg-primario
+                                            text-blanco
+                                            sm:left-6
+                                            sm:top-6
+                                            sm:size-14">
+                                    {service.icon && (
+                                        <service.icon className="size-7 sm:size-8" />
+                                    )}
                                 </Card>
 
                                 {/* Texto: inicia después del ícono y tiene ancho limitado */}
-                                <div className="ml-20 max-w-[14rem]">
+                                <div className="ml-16 pr-1 sm:ml-20 sm:max-w-[14rem]">
                                     <h3 className="text-lg font-bold text-fondo">
                                         {service.title}
                                     </h3>
@@ -126,10 +137,19 @@ const Services = () => {
                                     </p>
                                 </div>
 
-                                <img
-                                    src={service.img}
-                                    alt={`Ilustración de ${service.title}`}
-                                    className="absolute bottom-5 right-5 h-35 w-auto object-contain"
+                                <img src={service.img}
+                                    alt=""
+                                    aria-hidden="true"
+                                    className="
+                                        absolute
+                                        bottom-5
+                                        right-5
+                                        hidden
+                                        h-35
+                                        w-auto
+                                        object-contain
+                                        sm:block
+                                    "
                                 />
                             </Card>
                         ))

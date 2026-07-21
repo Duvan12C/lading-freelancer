@@ -24,16 +24,18 @@ const Hero = () => {
                 lg:rounded-br-[16rem]
             "
         >
-            <div
-                className="
+            <div className="
                     mx-auto
                     grid
                     min-h-[calc(100svh-5rem)]
                     max-w-7xl
                     items-center
-                    gap-12
-                    px-6
-                    py-16
+                    gap-8
+                    px-5
+                    py-10
+                    sm:gap-12
+                    sm:px-6
+                    sm:py-16
                     lg:grid-cols-2
                     lg:px-8
                 "
@@ -58,15 +60,7 @@ const Hero = () => {
                         Hola, soy Duvan Castellanos
                     </div>
 
-                    <h1
-                        className="
-                            text-4xl
-                            font-bold
-                            leading-tight
-                            text-primario
-                            sm:text-5xl
-                        "
-                    >
+                    <h1 className="text-[2.5rem] font-bold leading-[1.08] text-primario sm:text-5xl">
                         Sistemas y soluciones digitales
                         <br />
                         a la medida de tu negocio.
@@ -88,8 +82,10 @@ const Hero = () => {
                         mejor.
                     </p>
 
-                    <div className="mt-8 flex flex-wrap gap-3">
+                    <div className="mt-7 grid grid-cols-1 gap-3 min-[420px]:flex">
                         <Button
+                            fullWidth
+                            className="min-[420px]:w-auto"
                             onClick={() => scrollToSection('contacto')}
                             icon={<FiArrowUpRight />}
                             iconPosition="right"
@@ -98,6 +94,8 @@ const Hero = () => {
                         </Button>
 
                         <Button
+                            fullWidth
+                            className="min-[420px]:w-auto"
                             onClick={() => scrollToSection('proyectos')}
                             variant="outline"
                             color="primario"
@@ -111,29 +109,28 @@ const Hero = () => {
                 </div>
 
                 {/* Columna derecha */}
-                <div className="
-                    relative
-                    flex
-                    h-[320px]
-                    items-center
-                    justify-center
-                    lg:h-[460px]
-                    lg:justify-end
-                ">
+                <div
+                    className="
+                        relative
+                        flex
+                        h-[250px]
+                        items-center
+                        justify-center
+                        sm:h-[320px]
+                        lg:h-[460px]
+                        lg:justify-end"
+                >
                     <img
                         src={heroIllustration}
                         alt="Ilustración de desarrollo web"
                         className="
                             w-full
-                            max-w-xl
+                            max-w-[390px]
                             object-contain
-
                             lg:absolute
                             lg:right-[-5rem]
                             lg:w-[760px]
-                            lg:max-w-none
-                        "
-                    />
+                            lg:max-w-none"/>
                 </div>
             </div>
         </section>
