@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/Button';
 import { FiArrowUpRight, FiChevronDown, FiMail } from 'react-icons/fi';
 import Card from '@/components/ui/Card';
-import { FaCalendar, FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
     return (
