@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+@theme {
+    /* Fondo principal oscuro de la página */
+    --color-fondo: #090814;
+    --color-fondo-card:#121120;
+
+    /* Fondos de cards oscuras y formulario */
+    --color-superficie: #1C1E30;
+    --color-superficie-secundaria: #201D4A;
+
+    /* Morados principales */
+    --color-primario: #6C63FF;
+    --color-primario-claro: #9F99FF;
+    --color-primario-oscuro: #201D4A;
+
+    /* Acento coral, úsalo poco */
+    --color-acento: #EB9481;
+
+    /* Textos claros */
+    --color-blanco: #FFFFFF;
+    --color-blanco-suave: #F8F8FE;
+
+    /* Textos secundarios */
+    --color-texto-secundario: #A6A6A6;
+    --color-texto-oscuro: #263238;
+    --color-gris-azulado: #455A64;
+
+    /* Bordes */
+    --color-borde: #3D4059;
+    --color-borde-morado: #6C63FF;
+
+    /* Gradiente para botones */
+    --background-image-degradado-primario: linear-gradient(
+        90deg,
+        #6C63FF 0%,
+        #9F99FF 100%
+    );
+}

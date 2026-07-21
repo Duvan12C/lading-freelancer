@@ -1,0 +1,18 @@
+<svg width="320" height="250" viewBox="0 0 320 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Aplicación móvil</title>
+  <defs>
+    <linearGradient id="soft" x1="71" y1="28" x2="246" y2="222" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF"/><stop offset="1" stop-color="#F1EEFF"/></linearGradient>
+    <filter id="glow" x="31" y="2" width="258" height="248" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="9"/></filter>
+  </defs>
+  <rect x="73" y="22" width="174" height="210" rx="18" fill="#8B74FF" opacity=".14" filter="url(#glow)"/>
+  <rect x="77" y="18" width="166" height="214" rx="17" fill="url(#soft)" stroke="#8065FF" stroke-width="3"/>
+  <rect x="132" y="29" width="56" height="6" rx="3" fill="#A495FF"/>
+  <circle cx="160" cy="213" r="7" stroke="#A495FF" stroke-width="3"/>
+  <rect x="91" y="49" width="138" height="143" rx="8" fill="#F9F8FF"/>
+  <circle cx="116" cy="77" r="17" fill="#FFF" stroke="#8D77FF" stroke-width="3"/>
+  <rect x="145" y="63" width="61" height="8" rx="4" fill="#B8ADFF"/>
+  <rect x="145" y="79" width="48" height="7" rx="3.5" fill="#D0CAFF"/>
+  <rect x="101" y="112" width="118" height="43" rx="6" fill="#ECE9FF"/>
+  <rect x="101" y="164" width="51" height="18" rx="5" fill="#DCD6FF"/>
+  <rect x="168" y="164" width="51" height="18" rx="5" fill="#BCB0FF"/>
+</svg>

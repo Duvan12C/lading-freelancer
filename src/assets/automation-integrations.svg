@@ -1,0 +1,14 @@
+<svg width="320" height="250" viewBox="0 0 320 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Integraciones y automatización</title>
+  <defs><filter id="blur" x="0" y="0" width="320" height="250" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="8"/></filter></defs>
+  <rect x="50" y="35" width="220" height="180" rx="28" fill="#836BFF" opacity=".11" filter="url(#blur)"/>
+  <path d="M88 72H232V178H88V72Z" stroke="#B0A3FF" stroke-width="3" stroke-dasharray="4 8"/>
+  <path d="M88 72L160 125L232 72M88 178L160 125L232 178" stroke="#C1B7FF" stroke-width="3" stroke-dasharray="4 8"/>
+  <rect x="59" y="48" width="57" height="48" rx="9" fill="#F8F7FF" stroke="#8065FF" stroke-width="3"/>
+  <rect x="204" y="48" width="57" height="48" rx="9" fill="#F8F7FF" stroke="#8065FF" stroke-width="3"/>
+  <rect x="59" y="154" width="57" height="48" rx="9" fill="#F8F7FF" stroke="#8065FF" stroke-width="3"/>
+  <rect x="204" y="154" width="57" height="48" rx="9" fill="#F8F7FF" stroke="#8065FF" stroke-width="3"/>
+  <circle cx="160" cy="125" r="33" fill="#F6F4FF" stroke="#8065FF" stroke-width="3"/>
+  <path d="M160 103L166 110L176 108L178 118L187 123L181 132L184 142L174 146L169 155L160 150L151 155L146 146L136 142L139 132L133 123L142 118L144 108L154 110L160 103Z" fill="#A190FF"/>
+  <circle cx="160" cy="127" r="10" fill="#F8F7FF"/>
+</svg>

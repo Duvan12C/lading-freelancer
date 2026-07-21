@@ -1,0 +1,19 @@
+<svg width="320" height="250" viewBox="0 0 320 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Página web y landing page</title>
+  <defs>
+    <linearGradient id="panel" x1="18" y1="28" x2="302" y2="222" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF"/><stop offset="1" stop-color="#F2EFFF"/></linearGradient>
+    <filter id="shadow" x="0" y="0" width="320" height="250" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect x="20" y="38" width="280" height="174" rx="12" fill="#7A60FF" opacity=".13" filter="url(#shadow)"/>
+  <rect x="20" y="31" width="280" height="174" rx="11" fill="url(#panel)" stroke="#8065FF" stroke-width="3"/>
+  <path d="M20 58H300" stroke="#B6A9FF" stroke-width="3"/>
+  <circle cx="38" cy="45" r="4" fill="#8065FF"/><circle cx="53" cy="45" r="4" fill="#AD9EFF"/><circle cx="68" cy="45" r="4" fill="#D1CAFF"/>
+  <rect x="43" y="74" width="98" height="12" rx="4" fill="#C6BDFF"/>
+  <rect x="43" y="96" width="72" height="7" rx="3.5" fill="#DED9FF"/>
+  <rect x="43" y="110" width="59" height="7" rx="3.5" fill="#E7E3FF"/>
+  <rect x="43" y="132" width="68" height="22" rx="5" fill="#8A73FF"/>
+  <rect x="162" y="74" width="112" height="95" rx="6" fill="#E7E2FF" stroke="#B2A5FF" stroke-width="2"/>
+  <path d="M171 157L199 126L219 145L238 113L266 157H171Z" fill="#B8ACFF"/>
+  <circle cx="239" cy="104" r="10" fill="#D3CCFF"/>
+  <rect x="162" y="179" width="63" height="7" rx="3.5" fill="#C9C0FF"/>
+</svg>
