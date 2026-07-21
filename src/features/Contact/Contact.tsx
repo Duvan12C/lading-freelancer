@@ -3,8 +3,11 @@ import { Button } from '@/components/ui/Button';
 import { FiArrowUpRight, FiChevronDown, FiMail } from 'react-icons/fi';
 import Card from '@/components/ui/Card';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = () => {
+
+    const [state, handleSubmit] = useForm('mvzerejk');
     return (
         <section
             id="contacto"
@@ -26,54 +29,20 @@ const Contact = () => {
                     before:w-[150%]
                     before:-translate-x-1/2
                     before:rounded-[50%]
-                    before:bg-blanco
-                "
-        >
-            <div
-                className="
-                    relative
-                    z-10
-                    mx-auto
-                    grid
-                    max-w-7xl
-                    items-center
-                    gap-12
-                    px-6
-                    py-16
-                    lg:grid-cols-2
-                    lg:px-8
-                "
-            >
+                    before:bg-blanco">
+            <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:px-8">
                 {/* Columna izquierda */}
                 <div className="max-w-xl">
                     <h3 className="text-lg font-bold text-primario uppercase">
                         Contacto
                     </h3>
-                    <h1
-                        className="
-                            text-4xl
-                            font-bold
-                            leading-tight
-                            text-blanco
-                            sm:text-5xl
-                        "
-                    >
+                    <h1 className="text-4xl font-bold leading-tight text-blanco sm:text-5xl">
                         ¿Tienes un idea o un
                         <br />
                         sistema que quieres mejorar?
-
                     </h1>
 
-                    <p
-                        className="
-                            mt-6
-                            max-w-lg
-                            text-base
-                            leading-relaxed
-                            text-texto-secundario
-                            sm:text-lg
-                        "
-                    >
+                    <p className="mt-6 max-w-lg text-base leading-relaxed text-texto-secundario sm:text-lg">
                         Cuentame sobre tu proyecto o el desafio que quieres resolver.
                         Te responderé lo antes posible con una propuesta clara,
                         alineada a tus objetivos y necesidades.
@@ -152,10 +121,7 @@ const Contact = () => {
                         rounded="xl"
                         className="bg-superficie/40 p-6 sm:p-8"
                     >
-                        <form
-                            onSubmit={(event) => event.preventDefault()}
-                            className="space-y-5"
-                        >
+                        <form onSubmit={handleSubmit} className="space-y-5">
                             <div>
                                 <label
                                     htmlFor="nombre"
@@ -169,21 +135,22 @@ const Contact = () => {
                                     name="nombre"
                                     type="text"
                                     autoComplete="name"
+                                    required
                                     className="
-                        h-12
-                        w-full
-                        rounded-md
-                        border
-                        border-borde
-                        bg-superficie
-                        px-4
-                        text-blanco
-                        outline-none
-                        transition-colors
-                        focus:border-primario
-                        focus:ring-2
-                        focus:ring-primario/20
-                    "
+                                            h-12
+                                            w-full
+                                            rounded-md
+                                            border
+                                            border-borde
+                                            bg-superficie
+                                            px-4
+                                            text-blanco
+                                            outline-none
+                                            transition-colors
+                                            focus:border-primario
+                                            focus:ring-2
+                                            focus:ring-primario/20
+                                        "
                                 />
                             </div>
 
@@ -197,9 +164,10 @@ const Contact = () => {
 
                                 <input
                                     id="correo"
-                                    name="correo"
+                                    name="email"
                                     type="email"
                                     autoComplete="email"
+                                    required
                                     className="
                                         h-12
                                         w-full
@@ -216,6 +184,11 @@ const Contact = () => {
                                         focus:ring-primario/20
                                     "
                                 />
+                                <ValidationError
+                                    prefix="Correo"
+                                    field="email"
+                                    errors={state.errors}
+                                />
                             </div>
 
                             <div>
@@ -231,6 +204,7 @@ const Contact = () => {
                                         id="tipo-proyecto"
                                         name="tipoProyecto"
                                         defaultValue=""
+                                        required
                                         className="
                                                 h-12
                                                 w-full
@@ -296,6 +270,7 @@ const Contact = () => {
                                     id="mensaje"
                                     name="mensaje"
                                     rows={5}
+                                    required
                                     className="
                                         w-full
                                         resize-none
@@ -313,16 +288,32 @@ const Contact = () => {
                                         focus:ring-primario/20
                                     "
                                 />
+                                <ValidationError
+                                    prefix="Mensaje"
+                                    field="mensaje"
+                                    errors={state.errors}
+                                />
                             </div>
 
                             <Button
                                 type="submit"
                                 fullWidth
+                                disabled={state.submitting}
                                 icon={<FiArrowUpRight />}
                                 iconPosition="right"
                             >
-                                Solicitar cotización
+                                {state.submitting
+                                    ? 'Enviando...'
+                                    : 'Solicitar cotización'}
                             </Button>
+
+                            {state.succeeded && (
+                                <p className="text-center text-sm text-primario-claro">
+                                    ¡Solicitud enviada correctamente! Te responderé pronto.
+                                </p>
+                            )}
+
+                            <ValidationError errors={state.errors} />
                         </form>
                     </Card>
                 </div>
